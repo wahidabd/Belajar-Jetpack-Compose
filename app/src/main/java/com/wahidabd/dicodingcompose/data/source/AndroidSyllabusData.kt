@@ -2,7 +2,7 @@ package com.wahidabd.dicodingcompose.data.source
 
 import com.wahidabd.dicodingcompose.data.model.Syllabus
 
-object SyllabusData {
+object AndroidSyllabusData {
 
     val syllabusKotlin = listOf(
         Syllabus(
@@ -157,6 +157,154 @@ object SyllabusData {
             "Proyek akhir yang harus diselesaikan untuk lulus dari kelas ini.",
             "720 Menit",
             "1 Submission"
+        ),
+    )
+
+    val androidIntermediate = listOf(
+        Syllabus(
+            "Persiapan Belajar",
+            "Memahami HAKI, mekanisme belajar, forum diskusi, glosarium, dan daftar referensi.",
+            "25 Menit",
+            "5 Artikel"
+        ),
+        Syllabus(
+            "Advanced UI",
+            "Memahami bagaimana meningkatkan pengalaman pengguna dengan menggunakan Custom View, Widget, dan WebView.",
+            "710 Menit",
+            "14 Artike | 1 Ujian"
+        ),
+        Syllabus(
+            "Animation",
+            "Memahami bagaimana cara membuat animasi, baik menggunakan Properti Animation maupun Motion Layout.",
+            "490 Menit",
+            "8 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Localization & Accessibility",
+            "Memahami bagaimana menjangkau lebih banyak pengguna dengan menerapkan Localization untuk mendukung multi-bahasa dan Accessibility untuk mendukung pengguna berkebutuhan khusus.",
+            "695 Menit",
+            "10 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Service",
+            "Memahami bagaimana Service berjalan untuk melakukan suatu aksi di Background Thread.",
+            "320 Menit",
+            "7 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Media",
+            "Memahami cara mengelola media, baik berupa audio, video, maupun gambar dan mengunggahnya ke server dengan menggunakan Multipart.",
+            "790 Menit",
+            "13 Artikel | 1 Ujian"
+        ),Syllabus(
+            "Submission Aplikasi Story App",
+            "Cara mengimplementasikan komponen advanced untuk membuat aplikasi yang dapat register, login, dan upload data.",
+            "580 Menit",
+            "2 Artikel | 1 Submission"
+        ),
+        Syllabus(
+            "Geo Location",
+            "Memahami bagaimana menampilkan peta/maps menggunakan Google Maps API, mendapatkan posisi pengguna (latitude dan longitude) menggunakan Location Service serta mendapatkan informasi menarik dari radius dan posisi tertentu menggunakan Geofences.",
+            "440 Menit",
+            "8 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Advanced Testing",
+            "Mengetahui berbagai pendekatan dalam menguji aplikasi, baik secara unit testing menggunakan Test Double, maupun UI testing menggunakan Idling Resource maupun MockWebServer.",
+            "450 Menit",
+            "11 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Advanced Database",
+            "Memahami bagaimana cara melakukan pengujian untuk berbagai komponen Architecture Component dengan menggunakan TDD dan Test Double.",
+            "590 Menit",
+            "14 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Firebase",
+            "Memahami berbagai layanan Firebase yang biasa digunakan, seperti Authentication, Realtime Database, serta Firebase Cloud Messaging (FCM).",
+            "180 Menit",
+            "6 Artikel | 1 Ujian"
+        ),
+        Syllabus(
+            "Submission Akhir Aplikasi Story App",
+            "Ujian dan proyek akhir yang harus diselesaikan untuk lulus dari kelas ini.",
+            "700",
+            "3 Artikel | 1 Submission | 1 Ujian"
+        ),
+    )
+
+    val androidExpert = listOf(
+        Syllabus(
+            "Persiapan Belajar",
+            "Memahami HAKI, mekanisme belajar, forum diskusi, glosarium, dan daftar referensi.",
+            "25 Menit",
+            "5 Artikel"
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
+        ),
+        Syllabus(
+            "",
+            "",
+            "",
+            ""
         ),
     )
 }

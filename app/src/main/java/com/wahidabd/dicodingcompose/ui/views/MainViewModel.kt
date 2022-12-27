@@ -1,4 +1,4 @@
-package com.wahidabd.dicodingcompose.ui.views.home
+package com.wahidabd.dicodingcompose.ui.views
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -10,15 +10,19 @@ import com.wahidabd.dicodingcompose.data.repository.CourseRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class HomeViewModel (private val repository: CourseRepository) : ViewModel() {
+class MainViewModel (private val repository: CourseRepository) : ViewModel() {
 
     private val _resource: MutableStateFlow<Resource<List<Course>>> =
         MutableStateFlow(Resource.Loading)
 
     val resource: StateFlow<Resource<List<Course>>> get() =_resource
+
+    private val _detail: MutableStateFlow<Resource<Course>> =
+        MutableStateFlow(Resource.Loading)
+
+    val detail: StateFlow<Resource<Course>> get() = _detail
 
     private val _query = mutableStateOf("")
     val query: State<String> get() = _query
@@ -48,5 +52,13 @@ class HomeViewModel (private val repository: CourseRepository) : ViewModel() {
         _query.value = ""
         this.courses()
     }
+
+    fun getById(id: Int) {
+        viewModelScope.launch {
+            _detail.value = Resource.Loading
+            _detail.value = Resource.Success(repository.getById(id = id))
+        }
+    }
+
 
 }

@@ -30,6 +30,11 @@ class CourseRepository {
     fun getLearningPath(): Flow<List<LearningPath>> =
         flowOf(LearningPathData.list)
 
+    fun getById(id: Int): Course =
+        CourseData.list.first {
+            it.id == id
+        }
+
     companion object {
         @Volatile
         private var instance: CourseRepository? = null

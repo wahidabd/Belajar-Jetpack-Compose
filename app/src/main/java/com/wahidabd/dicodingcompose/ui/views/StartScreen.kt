@@ -14,6 +14,7 @@ import androidx.navigation.compose.rememberNavController
 import com.wahidabd.dicodingcompose.navigation.Routes
 import com.wahidabd.dicodingcompose.ui.views.auth.LoginScreen
 import com.wahidabd.dicodingcompose.ui.views.auth.RegisterScreen
+import com.wahidabd.dicodingcompose.ui.views.search.SearchScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -24,12 +25,6 @@ fun StartScreen(
     Scaffold {
         val padding = it
         NavHost(navController = navController, startDestination = Routes.Main.route){
-//            composable(Routes.Login.route){
-//                LoginScreen(navController = navController)
-//            }
-//            composable(Routes.Register.route){
-//                RegisterScreen(navController = navController)
-//            }
             composable(Routes.Main.route){
                 MainScreen()
             }

@@ -18,6 +18,7 @@ import com.wahidabd.dicodingcompose.ui.components.BottomNavigationBar
 import com.wahidabd.dicodingcompose.ui.views.detail.DetailScreen
 import com.wahidabd.dicodingcompose.ui.views.home.HomeScreen
 import com.wahidabd.dicodingcompose.ui.views.profile.ProfileScreen
+import com.wahidabd.dicodingcompose.ui.views.search.SearchScreen
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -38,10 +39,13 @@ fun MainScreen(navController: NavHostController = rememberNavController()) {
             composable(Routes.Profile.route) {
                 ProfileScreen(navController = navController)
             }
+            composable(Routes.Search.route) {
+                SearchScreen(navController = navController)
+            }
             composable(
                 Routes.Detail.route,
                 arguments = listOf(navArgument("id") { type = NavType.IntType })
-            ){
+            ) {
                 val id = it.arguments?.getInt("id") ?: 0
                 DetailScreen(navController = navController, id = id)
             }

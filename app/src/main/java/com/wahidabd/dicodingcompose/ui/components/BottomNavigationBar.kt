@@ -23,6 +23,7 @@ import com.wahidabd.dicodingcompose.ui.views.MainScreen
 
 @Composable
 fun BottomNavigationBar(navController: NavController) {
+
     val items = listOf(
         NavigationItem.Home,
         NavigationItem.Profile
@@ -65,10 +66,4 @@ fun BottomNavigationBar(navController: NavController) {
             )
         }
     }
-}
-
-@Preview(showBackground = true, showSystemUi = true)
-@Composable
-fun MainScreenPreview() {
-    MainScreen()
 }

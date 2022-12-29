@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Dicoding Compose</string>
+    <string name="error">Something wrong</string>
+    <string name="soon">Coming Soon</string>
     <string name="placeholder_search">Search Courses</string>
 </resources>

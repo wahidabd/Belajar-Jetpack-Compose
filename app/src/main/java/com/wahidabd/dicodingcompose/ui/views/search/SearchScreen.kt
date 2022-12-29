@@ -22,7 +22,9 @@ import com.wahidabd.dicodingcompose.ui.components.SearchBar
 import com.wahidabd.dicodingcompose.ui.views.MainViewModel
 import com.wahidabd.dicodingcompose.R
 import com.wahidabd.dicodingcompose.core.Resource
+import com.wahidabd.dicodingcompose.navigation.Routes
 import com.wahidabd.dicodingcompose.ui.components.CardCourse
+import com.wahidabd.dicodingcompose.ui.theme.BlueShade
 import com.wahidabd.dicodingcompose.ui.theme.SoftGray2
 import com.wahidabd.dicodingcompose.ui.theme.White2
 
@@ -67,9 +69,10 @@ fun SearchScreen(
                                         ),
                                         item = state.data[item],
                                         onClick = {
-                                            navController
+                                            navController.navigate(Routes.Detail.createRoute(state.data[item].id))
                                         }
                                     )
+                                    Spacer(modifier = Modifier.height(12.dp))
                                 }
                             }
                         }else{
@@ -129,7 +132,7 @@ fun SearchField(viewModel: MainViewModel) {
                     modifier = Modifier.width(24.dp),
                     painter = painterResource(id = R.drawable.ic_filter),
                     contentDescription = "Filter",
-                    tint = SoftGray2
+                    tint = BlueShade
                 )
             }
         }

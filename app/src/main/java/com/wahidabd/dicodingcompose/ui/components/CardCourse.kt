@@ -21,6 +21,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -89,6 +90,7 @@ fun CardCourse(modifier: Modifier = Modifier, item: Course, onClick: (Int) -> Un
             Text(
                 text = item.description,
                 modifier = Modifier.padding(horizontal = 12.dp),
+                textAlign = TextAlign.Justify,
                 overflow = TextOverflow.Ellipsis,
                 maxLines = 4,
                 style = MaterialTheme.typography.bodySmall.copy(
@@ -109,7 +111,7 @@ fun Path(path: String) {
             modifier = Modifier
                 .width(16.dp)
                 .size(24.dp),
-            tint = Color.DarkGray,
+            tint = Dark,
             contentDescription = "level"
         )
         Spacer(modifier = Modifier.width(4.dp))
@@ -118,80 +120,7 @@ fun Path(path: String) {
             style = MaterialTheme.typography.labelSmall.copy(
                 fontSize = 11.sp,
                 fontWeight = FontWeight.Medium,
-                color = SoftGray2,
-                lineHeight = 0.sp
-            )
-        )
-    }
-}
-
-
-@Composable
-fun Level(level: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(
-            painter = painterResource(id = R.drawable.ic_level),
-            modifier = Modifier
-                .width(16.dp)
-                .size(24.dp),
-            tint = Blue,
-            contentDescription = "level"
-        )
-        Spacer(modifier = Modifier.width(4.dp))
-        Text(
-            text = level,
-            style = MaterialTheme.typography.labelSmall.copy(
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Medium,
-                color = SoftGray2,
-                lineHeight = 0.sp
-            )
-        )
-    }
-}
-
-@Composable
-fun Time(time: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(
-            painter = painterResource(id = R.drawable.ic_clock),
-            modifier = Modifier
-                .width(16.dp)
-                .size(24.dp),
-            tint = Color.Cyan,
-            contentDescription = "time"
-        )
-        Spacer(modifier = Modifier.width(4.dp))
-        Text(
-            text = time,
-            style = MaterialTheme.typography.labelSmall.copy(
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Medium,
-                color = SoftGray2,
-                lineHeight = 0.sp
-            )
-        )
-    }
-}
-
-@Composable
-fun Module(module: String) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Icon(
-            painter = painterResource(id = R.drawable.ic_module),
-            modifier = Modifier
-                .width(16.dp)
-                .size(24.dp),
-            tint = BlueShade,
-            contentDescription = "module"
-        )
-        Spacer(modifier = Modifier.width(4.dp))
-        Text(
-            text = module,
-            style = MaterialTheme.typography.labelSmall.copy(
-                fontSize = 11.sp,
-                fontWeight = FontWeight.Medium,
-                color = SoftGray2,
+                color = Dark,
                 lineHeight = 0.sp
             )
         )

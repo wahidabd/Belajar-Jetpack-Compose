@@ -1,5 +1,6 @@
 package com.wahidabd.dicodingcompose.ui.views
 
+import android.util.Log
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -18,6 +19,9 @@ class MainViewModel (private val repository: CourseRepository) : ViewModel() {
         MutableStateFlow(Resource.Loading)
 
     val resource: StateFlow<Resource<List<Course>>> get() =_resource
+
+    private val _openId = MutableStateFlow(0)
+    val openId: StateFlow<Int> get() = _openId
 
     private val _detail: MutableStateFlow<Resource<Course>> =
         MutableStateFlow(Resource.Loading)
@@ -57,6 +61,14 @@ class MainViewModel (private val repository: CourseRepository) : ViewModel() {
         viewModelScope.launch {
             _detail.value = Resource.Loading
             _detail.value = Resource.Success(repository.getById(id = id))
+        }
+    }
+
+    fun setOpenSyllabus(id: Int) {
+        if (_openId.value == id) {
+            _openId.value = 0
+        } else {
+            _openId.value = id
         }
     }
 

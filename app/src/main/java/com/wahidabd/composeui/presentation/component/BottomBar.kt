@@ -14,6 +14,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.wahidabd.composeui.ui.navigation.screen.BottomNavItem
+import com.wahidabd.composeui.ui.theme.Green
 
 
 /**
@@ -53,11 +54,11 @@ fun BottomBar(
                         Text(
                             text =  item.title,
                             fontWeight = FontWeight.SemiBold,
-                            color = if (currentRoute == item.route) Color.Green else Color.Black.copy(0.4f)
+                            color = if (currentRoute == item.route) Green else Color.Black.copy(0.4f)
                         )
                     },
                     selected = currentRoute == item.route,
-                    selectedContentColor = Color.Green,
+                    selectedContentColor = Green,
                     unselectedContentColor = Color.Black.copy(0.4f),
                     onClick = {
                         navController.navigate(item.route){

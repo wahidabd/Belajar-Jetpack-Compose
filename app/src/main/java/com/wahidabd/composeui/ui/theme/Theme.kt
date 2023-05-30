@@ -1,30 +1,21 @@
 package com.wahidabd.composeui.ui.theme
 
-import android.app.Activity
-import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
-import androidx.compose.material3.lightColorScheme
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.darkColors
+import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.SideEffect
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalView
-import androidx.core.view.WindowCompat
 
-private val DarkColorScheme = darkColorScheme(
+private val DarkColorScheme = darkColors(
     primary = Purple80,
     secondary = PurpleGrey80,
-    tertiary = Pink80
+    primaryVariant = Purple40
 )
 
-private val LightColorScheme = lightColorScheme(
+private val LightColorScheme = lightColors(
     primary = Purple40,
     secondary = PurpleGrey40,
-    tertiary = Pink40
+    primaryVariant = Purple40
 )
 
 @Composable
@@ -38,7 +29,7 @@ fun ComposeUiTheme(
     val colors = if (darkTheme) DarkColorScheme else LightColorScheme
 
     MaterialTheme(
-        colorScheme = colors,
+        colors = colors,
         typography = TypographyStyle,
         content = content
     )

@@ -1,6 +1,6 @@
 package com.wahidabd.composeui.ui.theme
 
-import androidx.compose.material3.Typography
+import androidx.compose.material.Typography
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.Font
@@ -19,13 +19,13 @@ val GilroyFontFamily = FontFamily(
 )
 
 val TypographyStyle = Typography(
-    titleMedium = TextStyle(
+    h1 = TextStyle(
         fontFamily = GilroyFontFamily,
         fontWeight = FontWeight.Bold,
         color = Color.White,
         fontSize = 49.sp
     ),
-    bodyMedium = TextStyle(
+    body1 = TextStyle(
         fontFamily = GilroyFontFamily,
         fontWeight = FontWeight.Bold,
         color = Color.White,

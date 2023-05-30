@@ -8,6 +8,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import androidx.navigation.navigation
+import com.google.accompanist.pager.ExperimentalPagerApi
 import com.wahidabd.composeui.presentation.screen.about.AboutScreen
 import com.wahidabd.composeui.presentation.screen.cart.CartScreen
 import com.wahidabd.composeui.presentation.screen.detail.DetailScreen
@@ -25,6 +26,7 @@ import com.wahidabd.composeui.utils.Constant.PRODUCT_ARGUMENT_KEY
  */
 
 
+@ExperimentalPagerApi
 @Composable
 fun MainNavGraph(navController: NavHostController) {
 

@@ -2,6 +2,7 @@ package com.wahidabd.composeui.di
 
 import com.wahidabd.composeui.presentation.screen.home.HomeViewModel
 import com.wahidabd.composeui.presentation.screen.onboarding.OnBoardingViewModel
+import com.wahidabd.composeui.presentation.screen.search.SearchViewModel
 import com.wahidabd.composeui.presentation.screen.splash.SplashViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -17,4 +18,5 @@ val viewModelModule = module {
     viewModel { SplashViewModel(get()) }
     viewModel { OnBoardingViewModel(get()) }
     viewModel { HomeViewModel(get()) }
+    viewModel { SearchViewModel(get()) }
 }
